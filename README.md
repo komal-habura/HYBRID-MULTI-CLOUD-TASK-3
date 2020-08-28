@@ -10,10 +10,15 @@ Amazon VPC concepts
 
 Amazon VPC is the networking layer for Amazon EC2. If you're new to Amazon EC2, see What is Amazon EC2? in the Amazon EC2 User Guide for Linux Instances to get a brief overview.
 The following are the key concepts for VPCs:
+
 •	Virtual private cloud (VPC) — A virtual network dedicated to your AWS account.
+
 •	Subnet — A range of IP addresses in your VPC.
+
 •	Route table — A set of rules, called routes, that are used to determine where network traffic is directed.
+
 •	Internet gateway — A gateway that you attach to your VPC to enable communication between resources in your VPC and the internet.
+
 •	VPC endpoint — Enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection. Instances in your VPC do not require public IP addresses to communicate with resources in the service. Traffic between your VPC and the other service does not leave the Amazon network.
 
 
@@ -21,9 +26,13 @@ Accessing Amazon VPC
 
 
 You can create, access, and manage your VPCs using any of the following interfaces:
+
 •	AWS Management Console — Provides a web interface that you can use to access your VPCs.
+
 •	AWS Command Line Interface (AWS CLI) — Provides commands for a broad set of AWS services, including Amazon VPC, and is supported on Windows, Mac, and Linux. For more information, see AWS Command Line Interface.
+
 •	AWS SDKs — Provides language-specific APIs and takes care of many of the connection details, such as calculating signatures, handling request retries, and error handling. For more information, see AWS SDKs.
+
 •	Query API — Provides low-level API actions that you call using HTTPS requests. Using the Query API is the most direct way to access Amazon VPC, but it requires that your application handle low-level details such as generating the hash to sign the request, and error handling
 
 
@@ -36,8 +45,11 @@ So, we use Wordpress software with dedicated database server.
 Database should not be accessible from the outside world for security purposes.
 Here only public  the WordPress to clients .
 So here are the steps for proper understanding!
+
 Steps:
+
 1) Write a Infrastructure as code using terraform, which automatically create a VPC.
+
 2) In that VPC we have to create 2 subnets:
     a)  public  subnet [ Accessible for Public World! ] 
     b)  private subnet [ Restricted for Public World! ]
